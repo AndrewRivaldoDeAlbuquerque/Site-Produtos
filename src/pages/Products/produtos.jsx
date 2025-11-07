@@ -4,13 +4,10 @@ import './produtos.css';
 
   /* spellcheck serve para que o navegador nao verifique erros ortograficos nesse campo e consequentemente nao sublinhe o texto*/
 function Produtos() {
-
-
     return (
         <div className="page-container">
                 <div class="cadastrarProdutos">
                     <form action="" method="">
-
                         <h2>Cadastro de produtos</h2>
                         <div className="nome_Produto">
                             <label for="nomeProduto">Nome do Produto</label>

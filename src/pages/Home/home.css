@@ -1,4 +1,4 @@
-  
+
 .container-fluid {
   margin-top: 5%;
   background: #B7DEED;
@@ -14,12 +14,14 @@
   gap: 20%;
 
 }
+
 h3{
    background: #B7DEED;
 background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+
 h5 {
       color: #555;
 }
