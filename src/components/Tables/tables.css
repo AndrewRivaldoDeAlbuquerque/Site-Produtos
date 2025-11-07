@@ -1,0 +1,20 @@
+.tables{
+    background-color: rgb(15, 15, 15);
+    width: 90%;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(5%); 
+    margin-top: 30px;
+    line-height: 50px;
+
+}
+
+.button{
+    display: flexbox;
+    padding-right: 30px;
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+}

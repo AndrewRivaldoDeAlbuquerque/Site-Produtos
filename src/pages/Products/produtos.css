@@ -1,0 +1,85 @@
+/* Estilo para o container da página */
+.page-container {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Garante que o container ocupe pelo menos toda a altura da viewport */
+  text-align: center;
+}
+
+/* Estilo para o conteúdo principal */
+.content-wrap {
+  /*flex: 1;  Faz com que o conteúdo ocupe todo o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  /* Espaço para o footer */
+}
+
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .cadastrarProdutos {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+  .cadastrarProdutos {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+}
+
+input[type="nomeProduto"],
+input[type="precoProduto"] {
+  color: #555;
+  outline: none;
+  margin-bottom: 25px;
+  box-shadow: none;
+  border-bottom-color: #999;
+  border-radius: 0;
+  /*remove cantos arredondados */
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #ccc;
+
+}
+
+.cadastrar {
+
+  color: wheat;
+  background-color: transparent;
+  border: 2;
+  border-radius: 20%;
+  text-decoration: none;
+  background: linear-gradient(90deg, #69eaf3 0%, #0ccc82 40%, #b7ecbe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+/* para sobrepor o efeito que o navegador por padrao põe */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: transparent !important;
+  /* Define o fundo como branco (o !important é frequentemente necessário) */
+  -webkit-text-fill-color: #555 !important;
+  /* Define a cor do texto como preta */
+  background-color: white !important;
+  /* Propriedade padrão para outros navegadores, embora menos eficaz em WebKit */
+  color: #555 !important;
+  /* cor da fonte */
+  text-decoration: none !important;
+}

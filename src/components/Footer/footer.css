@@ -1,0 +1,159 @@
+/* Estilo para o rodapé fixo na parte inferior */
+.footer-fixo {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0 0;
+    margin-top: auto;
+    /* Empurra o footer para baixo */
+    z-index: 100;
+}
+
+/* Container do conteúdo do rodapé */
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Estilo para a seção inferior do rodapé */
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Estilo para o nome no rodapé */
+.nome {
+    background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+/* Estilo para os títulos das seções */
+h5 {
+    background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Estilo para os parágrafos */
+p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* Estilo para a seção de contato */
+.contato {
+    background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    text-align: center; 
+    margin-left: 35px;
+}
+
+/* Container dos ícones de redes sociais */
+.space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+/* Estilo para os links de redes sociais */
+.space a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover nos ícones */
+.space a:hover {
+    background: linear-gradient(135deg, #00FF00 0%, #00FFFF 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 2rem;
+    }
+
+    .footer-section {
+        flex: 1;
+        padding: 0 1rem;
+    }
+
+    .space {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+
+    h5,
+    p,
+    .nome,
+    .contato {
+        text-align: left;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .footer-fixo {
+        padding: 1.5rem 0;
+    }
+
+    .space {
+        gap: 1rem;
+    }
+
+    .space a {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+}

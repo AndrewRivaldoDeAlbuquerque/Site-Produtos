@@ -1,0 +1,219 @@
+/* --- Layout Principal --- */
+.container-cadastro {
+    display: flex;
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10%;
+    transform: translate(0%);
+    /* Garante quero container respeite as bordas */
+}
+
+.coluna-form,
+.coluna-social {
+    flex: 1;
+    /* Faz as duas colunas terem o mesmo tamanho */
+    padding: 40px;
+}
+
+/* --- Coluna da Esquerda (Formulário) --- */
+.coluna-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"],
+input[type="senha"] {
+    outline: none;
+    margin-bottom: 25px;
+    box-shadow: none;
+    border-bottom-color: #999;
+    border-radius: 0;
+    /*remove cantos arredondados */
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #ccc;
+}
+
+input:focus,
+input:valid,
+input:active {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+
+    /* 1. O HACK: 
+       "Pinta" o fundo com uma sombra interna gigante. */
+    /* Troque #000000 pela cor de fundo exata do seu input */
+    box-shadow: inset #000000;
+
+    /* 2. FORÇA a cor do texto a ser clara. 
+       (O Chrome também força o texto para preto, então precisamos disso) */
+    /* Troque #ffffff pela cor do seu texto (branco, verde, etc) */
+    -webkit-text-fill-color: transparent;
+
+
+    /* 3. (Opcional) Remove a borda azul do "focus" do Chrome */
+    outline: none;
+
+    /* 4. (Opcional) Impede que o browser mude a cor com transição */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-secao {
+    margin-bottom: 25px;
+}
+
+h2 {
+    background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+p,
+label {
+
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+label {
+    background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input[type="text"] {
+
+
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+    font-size: 1em;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom-color: #000;
+}
+.btn{
+     background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: center;
+}
+
+.linkEsq {
+
+     background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 1em;
+    font-weight: 400;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 55px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: auto;
+    /* Largura automática */
+    align-self: center;
+    /* Alinha o botão à esquerda */
+}
+
+/* --- Divisor Central --- */
+.divisor {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Cria a linha vertical */
+.divisor::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    /* Ajuste para não ir até o topo */
+    bottom: 10%;
+    /* Ajuste para não ir até a base */
+    width: 1px;
+    background-color: #ddd;
+    transform: translateX(-50%);
+}
+
+.divisor-texto {
+
+   
+
+    background-color: #000000;
+    /* Fundo branco para cobrir a linha */
+    padding: 0 10px;
+    color: #555;
+    position: relative;
+    /* Garante que fique acima da linha */
+    z-index: 1;
+}
+
+/* --- Coluna da Direita (Social) --- */
+.coluna-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.btn-social img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+.link-login {
+    color: #007bff;
+    /* Um azul padrão para links */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-login:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  /* remove espaçamentos padrão dos navegadores. */
+  padding: 0;
+  /* remove espaçamentos padrão dos navegadores. */
+  -webkit-box-sizing: border-box;
+  /*faz com que bordas e paddings sejam incluídos no tamanho total do elemento (facilita layout).*/
+  box-sizing: border-box;
+  /*faz com que bordas e paddings sejam incluídos no tamanho total do elemento (facilita layout).*/
+
+}
+
+/* Container principal do menu*/
+.navMenu {
+  position: absolute;
+  /*posiciona o menu em relação ao elemento pai mais próximo posicionado (ou ao body). */
+  top: 0;
+  /* move o menu para o centro da tela.  se tiver top:50% left 50%*/
+  left: 50%;
+  /* centraliza horizontalmente */
+  transform: translate(-50%);
+  /* centraliza perfeitamente transform: translate(-50%, -50%); */
+
+
+  width: 100%;
+  /* ocupa toda a largura */
+  height: 80px;
+  /* aumenta a altura do fundo */
+
+  gap: 30px;
+  /* Espaçamento entre os nomes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navMenu a {
+  /* bloco que deixa o texto da nav colorida */
+ 
+ background: #B7DEED;
+background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+
+
+  transition: all 0.2s ease-in-out;
+  line-height: 1;
+  /* garante alinhamento perfeito */
+}
+
+
+/* ANIMAÇÃO AO PASSAR O MOUSE */
+.navMenu .underline {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 50%; /* deixa a borda arredondada */
+  transform: translateX(-50%) scaleX(0);
+  transition: all 0.2s ease-in-out;
+
+  /* --- MÁGICA DO POSICIONAMENTO --- */
+
+  /* 1. Tira o ponto do fluxo normal da página */
+  position: absolute;
+
+  /* 2. Coloca ele a 50% da esquerda do link */
+  left: 50%;
+
+  /* 3. Puxa ele para baixo (ajuste o valor -px como quiser) */
+  bottom: -9px;
+
+  /* 4. Centraliza o ponto perfeitamente usando transform */
+  transform: translateX(-50%);
+
+  /* 5. Deixa invisível por padrão */
+  opacity: 0;
+}
+
+/* Mostra a barra ao passar o mouse no link */
+.navMenu a:hover .underline {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
